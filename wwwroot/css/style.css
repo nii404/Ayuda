@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+
+
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: lighter;
+}
+
+:root {
+  --primarycol: #fff;
+  --secondcol: #1895BC;
+  --tercol: #0F6079;
+  --textcol: black;
+  --othercol: #f1f2f2;
+
+
+  --ffhead: "Pattaya", sans-serif;
+  --ffmain: "Poppins", sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: var(--primarycol);
+  box-shadow: 0px 3px 30px 0px rgba(109, 109, 109, 0.08);
+  z-index: 997;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+}
+
+#header .logo {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: lighter;
+}
+
+#header .logo a {
+  color: #222222;
+  font-family: "Pattaya", sans-serif;
+  text-transform: lowercase;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Sign UP, Login
+--------------------------------------------------------------*/
+.sec {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.sec .form-area {
+  position: relative;
+  border-radius: 5px;
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sec .form-area .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index:10;
+  transition: 0.4s linear;
+}
+
+.sec .form-area .user .img-bx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.sec .form-area .user .img-bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec .form-area .user .form-bx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: var(--primarycol);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  transition: 0.5s;
+}
+
+.sec .form-area .user .form-bx form h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sec .form-area .user .form-bx form > p {
+  font-size: .7rem;
+  margin-bottom:  0;
+}
+
+.sec .form-area .user .form-bx form input {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  padding: 10px;
+  font-size: .8rem;
+  border-radius: 2px;
+  border: none;
+  background: var(--othercol);
+  outline: none;
+  margin: .5rem 0;
+}
+
+.sec .form-area .user .form-bx form input::placeholder {
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec .form-area .user .form-bx form input[type="submit"] {
+  background: var(--tercol);
+  color: var(--primarycol);
+  height: auto;
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.sec .form-area .user .form-bx form input[type="submit"]:hover {
+  background: var(--secondcol);
+}
+
+.sec .form-area .user .form-bx form .sign-in-part {
+  margin-top: 1rem;
+}
+
+.sec .form-area .user .form-bx form .sign-in-part a {
+  font-weight: 500;
+}
+
+
+/*--------Sign UP style ----------*/
+
+.sec .form-area .signupbx {
+  pointer-events: none;
+}
+
+.sec .form-area.active .signupbx {
+  pointer-events: visible;
+}
+
+.sec .form-area .signupbx .form-bx {
+  left: 100%;
+}
+
+.sec .form-area.active .signupbx .form-bx {
+  left: 0;
+}
+
+.sec .form-area .signupbx .img-bx {
+  left: -100%;
+}
+
+.sec .form-area.active .signupbx .img-bx {
+  left: 0;
+}
+
+
+
+.sec .form-area .signinbx .form-bx {
+  left: 0;
+}
+
+.sec .form-area.active .signinbx .form-bx {
+  left: 100%;
+}
+
+.sec .form-area .signinbx .img-bx {
+  left: 0;
+}
+
+.sec .form-area.active .signinbx .img-bx {
+  left: -100%;
+}
+
+
+/*--------Responsiveness for Sign In----------*/
+
+@media (max-width: 991px) {
+  .sec .form-area {
+    max-width: 400px;
+  }
+
+  .sec .form-area .img-bx {
+    display: none;
+  }
+
+  .sec .form-area .user .form-bx{
+    width: 100%;
+  }
+
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: var(--tercol);
+  padding: 30px 0;
+  color: var(--primarycol);
+  font-size: 14px;
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  color: #34b7a7;
+}
