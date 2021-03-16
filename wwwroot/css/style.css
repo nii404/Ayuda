@@ -22,6 +22,41 @@
 }
 
 
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: var(--ffmain);
+  font-weight: lighter;
+  color: var(--textcol);
+  background-color: var(--primarycol);
+}
+
+a :not(.donate) {
+  color: #34b7a7;
+}
+
+a:hover {
+  color: #51cdbe;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ffmain);
+}
+
+#main {
+  margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+  #main {
+    margin-top: 30px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -44,7 +79,7 @@
 
 #header .logo a {
   color: #222222;
-  font-family: "Pattaya", sans-serif;
+  font-family: var(--ffhead);
   text-transform: lowercase;
 }
 
@@ -234,6 +269,79 @@
   }
 
 }
+
+
+/*--------------------------------------------------------------
+Verification
+--------------------------------------------------------------*/
+
+
+.sec .form-area1 {
+  position: relative;
+  border-radius: 5px;
+  width: 400px;
+  height: 300px;
+  padding: 3rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sec .form-area1 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sec .form-area1 form h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  width: 100%;
+  text-align: left;
+}
+
+.sec .form-area1 form .ver-text > p {
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.sec .form-area1 form input {
+  width: 100%;
+  height: 34px;
+  padding: 10px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: .8rem;
+  border-radius: 2px;
+  border: none;
+  background: var(--othercol);
+  outline: none;
+  margin: .5rem 0;
+}
+
+.sec .form-area1 form input::placeholder {
+  font-size: .8rem;
+  text-align: center;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec .form-area1 form input[type='submit'] {
+  background: var(--tercol);
+  color: var(--primarycol);
+  height: auto;
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.sec .form-area1 form input[type='submit']:hover {
+  background: var(--secondcol);
+}
+
 
 
 
