@@ -208,49 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*--------Sign UP style ----------*/
 
-.sec .form-area .signupbx {
-  pointer-events: none;
-}
-
-.sec .form-area.active .signupbx {
-  pointer-events: visible;
-}
-
-.sec .form-area .signupbx .form-bx {
-  left: 100%;
-}
-
-.sec .form-area.active .signupbx .form-bx {
-  left: 0;
-}
-
-.sec .form-area .signupbx .img-bx {
-  left: -100%;
-}
-
-.sec .form-area.active .signupbx .img-bx {
-  left: 0;
-}
-
-
-
-.sec .form-area .signinbx .form-bx {
-  left: 0;
-}
-
-.sec .form-area.active .signinbx .form-bx {
-  left: 100%;
-}
-
-.sec .form-area .signinbx .img-bx {
-  left: 0;
-}
-
-.sec .form-area.active .signinbx .img-bx {
-  left: -100%;
-}
 
 
 /*--------Responsiveness for Sign In----------*/
